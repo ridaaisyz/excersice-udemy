@@ -1,0 +1,4 @@
+--Delete data in the table--
+DELETE FROM job
+WHERE job_name = 'Police'
+RETURNING job_id, job_name
