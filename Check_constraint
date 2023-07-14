@@ -1,0 +1,9 @@
+--check constraint--
+CREATE TABLE employees (
+	emp_id SERIAL PRIMARY KEY,
+	first_name VARCHAR (50) NOT NULL,
+	last_name VARCHAR (50) NOT NULL,
+	age INT CHECK (age > 18),
+	hire_date DATE,
+	salary INT CHECK (salary > 0)
+)
