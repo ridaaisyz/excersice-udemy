@@ -1,0 +1,23 @@
+--Create account Table--
+CREATE TABLE account(
+	user_id SERIAL PRIMARY KEY,
+	username VARCHAR (50) UNIQUE NOT NULL,
+	password VARCHAR (50) NOT NULL,
+	email VARCHAR (250) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+	last_login TIMESTAMP
+);
+
+--Create job table--
+CREATE TABLE job(
+	job_id SERIAL PRIMARY KEY,
+	job_name VARCHAR (200) UNIQUE NOT NULL
+);
+
+--create account_job table that references from account and job table--
+CREATE TABLE account_job (
+	user_id INT REFERENCES account (user_id),
+	job_id INT REFERENCES job(job_id),
+	hire_date TIMESTAMP
+);
+
