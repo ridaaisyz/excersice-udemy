@@ -1,0 +1,4 @@
+--insert into account table--
+INSERT INTO account (username, password, email, created_on)
+VALUES
+('Miranda', 'mirandy', 'miranda@mail.com', CURRENT_TIMESTAMP)
