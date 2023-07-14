@@ -1,0 +1,12 @@
+--Rename Table--
+ALTER TABLE information
+RENAME TO new_info
+
+--Rename Column--
+ALTER TABLE new_info
+RENAME COLUMN person TO person_name
+
+--Alter constraint that already exist in the column--
+ALTER TABLE new_info
+ALTER COLUMN person_name DROP NOT NULL
+
