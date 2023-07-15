@@ -1,0 +1,31 @@
+--create students table--
+CREATE TABLE students(
+	student_id SERIAL PRIMARY KEY,
+ 	first_name VARCHAR (50) NOT NULL,
+	last_name VARCHAR (50) NOT NULL,
+	homeroom_number INT,
+	phone VARCHAR (50) UNIQUE NOT NULL,
+	email VARCHAR (250) UNIQUE,
+	grad_year INT
+);
+
+--create teachers table--
+CREATE TABLE teachers (
+	teacher_id SERIAL NOT NULL,
+	first_name VARCHAR (50) NOT NULL,
+	last_name VARCHAR (50) NOT NULL,
+	homeroom_number INT,
+	department VARCHAR (45) NOT NULL,
+	email VARCHAR (250) UNIQUE NOT NULL,
+	phone VARCHAR (50) UNIQUE
+);
+
+--insert student data--
+INSERT INTO students (first_name,last_name,homeroom_number,phone,grad_year)
+VALUES
+('Mark', 'Watney', 5,'777-555-1234', 2035);
+
+--insert techer data--
+INSERT INTO teachers (first_name, last_name, homeroom_number, department, email, phone)
+VALUES
+('Jonas', 'Stalk', 5, 'Biology', 'jsalk@school.org', '777-555-4321');
